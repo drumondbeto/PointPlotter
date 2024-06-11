@@ -8,9 +8,8 @@ showLabels: bool = True
 with open('2D_Points.json', 'r') as f:
     data = json.load(f)
 
-# Set up points coords
-x = data["x"]
-y = data["y"]
+# Set up point coordinates
+x, y = zip(*points)
 
 # Plot points
 plt.scatter(x, y)
